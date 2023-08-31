@@ -29,8 +29,8 @@ You're now ready to know pretty much everything about the athletes that compete 
 No particular information about how to use the project are required.<br>
 Just explore the app and enjoy the contents.
 
-Important: The servers may take too much time to respond, and you may experiment a timeout error.<br>
-In that case you can both <strong>retry</strong> through an alert that handles the error, or <strong>restart</strong> the application.
+Important: The servers may take too much time to respond, due to the large amount of data requested, and you may experiment a timeout error.<br>
+In that case you can both <strong>retry</strong> through an alert that handles the error, or <strong>re-start</strong> the application after a while.
 
 # Architecture
 * Olympic Athletes project is implemented using the <strong>Model-View-Presenter (MVP)</strong> architecture pattern.
