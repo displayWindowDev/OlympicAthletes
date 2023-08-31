@@ -1,0 +1,823 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CA894E932A9C9F2D006B533E /* AthleteDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA894E922A9C9F2D006B533E /* AthleteDetailsViewController.swift */; };
+		CA9F29352A9F5A020036418E /* AthleteDetailsViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9F29342A9F5A020036418E /* AthleteDetailsViewPresenter.swift */; };
+		CA9F29372A9F5A0B0036418E /* AthleteDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9F29362A9F5A0B0036418E /* AthleteDetailsPresenter.swift */; };
+		CAA48A982A9354BB001A1DCB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA48A972A9354BB001A1DCB /* AppDelegate.swift */; };
+		CAA48A9A2A9354BB001A1DCB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA48A992A9354BB001A1DCB /* SceneDelegate.swift */; };
+		CAA48A9F2A9354BB001A1DCB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAA48A9D2A9354BB001A1DCB /* Main.storyboard */; };
+		CAA48AA12A9354BB001A1DCB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAA48AA02A9354BB001A1DCB /* Assets.xcassets */; };
+		CAA48AA42A9354BB001A1DCB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAA48AA22A9354BB001A1DCB /* LaunchScreen.storyboard */; };
+		CAA48AAF2A9354BB001A1DCB /* Olympic_AthletesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA48AAE2A9354BB001A1DCB /* Olympic_AthletesTests.swift */; };
+		CAA48AB92A9354BB001A1DCB /* Olympic_AthletesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA48AB82A9354BB001A1DCB /* Olympic_AthletesUITests.swift */; };
+		CAA48ABB2A9354BB001A1DCB /* Olympic_AthletesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA48ABA2A9354BB001A1DCB /* Olympic_AthletesUITestsLaunchTests.swift */; };
+		CAA48AC92A9354FC001A1DCB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA48AC82A9354FC001A1DCB /* HomeViewController.swift */; };
+		CAA48ACB2A93550D001A1DCB /* HomeViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA48ACA2A93550D001A1DCB /* HomeViewPresenter.swift */; };
+		CAA48ACD2A935516001A1DCB /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA48ACC2A935516001A1DCB /* HomePresenter.swift */; };
+		CAA48AD02A9355F5001A1DCB /* HomeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA48ACF2A9355F5001A1DCB /* HomeData.swift */; };
+		CAA48AD32A93581C001A1DCB /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA48AD22A93581C001A1DCB /* APIClient.swift */; };
+		CAA48AD82A93ACE8001A1DCB /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA48AD72A93ACE8001A1DCB /* APIRequest.swift */; };
+		CAA48ADA2A93AD03001A1DCB /* AthletesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA48AD92A93AD03001A1DCB /* AthletesRequest.swift */; };
+		CAA48ADC2A93AD1C001A1DCB /* Athlete.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA48ADB2A93AD1C001A1DCB /* Athlete.swift */; };
+		CAA48ADE2A93AD79001A1DCB /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA48ADD2A93AD79001A1DCB /* Game.swift */; };
+		CADD19202A9741A90096A1C1 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADD191F2A9741A90096A1C1 /* NetworkError.swift */; };
+		CAE1F3BC2A95E50F00A7C31B /* CarouselFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE1F3BB2A95E50F00A7C31B /* CarouselFlowLayout.swift */; };
+		CAEC524F2A9E0E8C0051CE0F /* ResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEC524D2A9E0E8C0051CE0F /* ResultCell.swift */; };
+		CAEC52502A9E0E8C0051CE0F /* ResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAEC524E2A9E0E8C0051CE0F /* ResultCell.xib */; };
+		CAEC52532A9E1DBE0051CE0F /* MedalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEC52522A9E1DBE0051CE0F /* MedalView.swift */; };
+		CAEC52552A9E1FB30051CE0F /* MedalView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAEC52542A9E1FB30051CE0F /* MedalView.xib */; };
+		CAFDA0982A94968F000E0029 /* GamesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFDA0972A94968F000E0029 /* GamesRequest.swift */; };
+		CAFDA09A2A9499E0000E0029 /* AthleteRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFDA0992A9499E0000E0029 /* AthleteRequest.swift */; };
+		CAFDA09C2A949EE1000E0029 /* AthletePhotoRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFDA09B2A949EE1000E0029 /* AthletePhotoRequest.swift */; };
+		CAFDA09E2A949FA9000E0029 /* AthleteResultsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFDA09D2A949FA9000E0029 /* AthleteResultsRequest.swift */; };
+		CAFDA0A02A949FF3000E0029 /* AthleteResut.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFDA09F2A949FF3000E0029 /* AthleteResut.swift */; };
+		CAFDA0A22A94A9B3000E0029 /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFDA0A12A94A9B3000E0029 /* APIResponse.swift */; };
+		CAFDA0A42A94BB31000E0029 /* GameAthletesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFDA0A32A94BB31000E0029 /* GameAthletesRequest.swift */; };
+		CAFDA0A72A94EB7A000E0029 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFDA0A52A94EB7A000E0029 /* HomeTableViewCell.swift */; };
+		CAFDA0A82A94EB7A000E0029 /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAFDA0A62A94EB7A000E0029 /* HomeTableViewCell.xib */; };
+		CAFDA0AC2A94EBE8000E0029 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFDA0AA2A94EBE8000E0029 /* CollectionViewCell.swift */; };
+		CAFDA0AD2A94EBE8000E0029 /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAFDA0AB2A94EBE8000E0029 /* CollectionViewCell.xib */; };
+		CAFDA0B22A94FF79000E0029 /* SpinnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFDA0B12A94FF79000E0029 /* SpinnerViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CAA48AAB2A9354BB001A1DCB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CAA48A8C2A9354BA001A1DCB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CAA48A932A9354BB001A1DCB;
+			remoteInfo = "Olympic Athletes";
+		};
+		CAA48AB52A9354BB001A1DCB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CAA48A8C2A9354BA001A1DCB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CAA48A932A9354BB001A1DCB;
+			remoteInfo = "Olympic Athletes";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CA894E922A9C9F2D006B533E /* AthleteDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AthleteDetailsViewController.swift; sourceTree = "<group>"; };
+		CA9F29342A9F5A020036418E /* AthleteDetailsViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AthleteDetailsViewPresenter.swift; sourceTree = "<group>"; };
+		CA9F29362A9F5A0B0036418E /* AthleteDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AthleteDetailsPresenter.swift; sourceTree = "<group>"; };
+		CA9F293C2A9F9ECD0036418E /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		CAA48A942A9354BB001A1DCB /* Olympic Athletes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Olympic Athletes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CAA48A972A9354BB001A1DCB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CAA48A992A9354BB001A1DCB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		CAA48A9E2A9354BB001A1DCB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CAA48AA02A9354BB001A1DCB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CAA48AA32A9354BB001A1DCB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CAA48AA52A9354BB001A1DCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CAA48AAA2A9354BB001A1DCB /* Olympic AthletesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Olympic AthletesTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CAA48AAE2A9354BB001A1DCB /* Olympic_AthletesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Olympic_AthletesTests.swift; sourceTree = "<group>"; };
+		CAA48AB42A9354BB001A1DCB /* Olympic AthletesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Olympic AthletesUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CAA48AB82A9354BB001A1DCB /* Olympic_AthletesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Olympic_AthletesUITests.swift; sourceTree = "<group>"; };
+		CAA48ABA2A9354BB001A1DCB /* Olympic_AthletesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Olympic_AthletesUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CAA48AC82A9354FC001A1DCB /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		CAA48ACA2A93550D001A1DCB /* HomeViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewPresenter.swift; sourceTree = "<group>"; };
+		CAA48ACC2A935516001A1DCB /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		CAA48ACF2A9355F5001A1DCB /* HomeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeData.swift; sourceTree = "<group>"; };
+		CAA48AD22A93581C001A1DCB /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		CAA48AD72A93ACE8001A1DCB /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
+		CAA48AD92A93AD03001A1DCB /* AthletesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AthletesRequest.swift; sourceTree = "<group>"; };
+		CAA48ADB2A93AD1C001A1DCB /* Athlete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Athlete.swift; sourceTree = "<group>"; };
+		CAA48ADD2A93AD79001A1DCB /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		CADD191F2A9741A90096A1C1 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		CAE1F3BB2A95E50F00A7C31B /* CarouselFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselFlowLayout.swift; sourceTree = "<group>"; };
+		CAEC524D2A9E0E8C0051CE0F /* ResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultCell.swift; sourceTree = "<group>"; };
+		CAEC524E2A9E0E8C0051CE0F /* ResultCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultCell.xib; sourceTree = "<group>"; };
+		CAEC52522A9E1DBE0051CE0F /* MedalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedalView.swift; sourceTree = "<group>"; };
+		CAEC52542A9E1FB30051CE0F /* MedalView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MedalView.xib; sourceTree = "<group>"; };
+		CAFDA0972A94968F000E0029 /* GamesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesRequest.swift; sourceTree = "<group>"; };
+		CAFDA0992A9499E0000E0029 /* AthleteRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AthleteRequest.swift; sourceTree = "<group>"; };
+		CAFDA09B2A949EE1000E0029 /* AthletePhotoRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AthletePhotoRequest.swift; sourceTree = "<group>"; };
+		CAFDA09D2A949FA9000E0029 /* AthleteResultsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AthleteResultsRequest.swift; sourceTree = "<group>"; };
+		CAFDA09F2A949FF3000E0029 /* AthleteResut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AthleteResut.swift; sourceTree = "<group>"; };
+		CAFDA0A12A94A9B3000E0029 /* APIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponse.swift; sourceTree = "<group>"; };
+		CAFDA0A32A94BB31000E0029 /* GameAthletesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameAthletesRequest.swift; sourceTree = "<group>"; };
+		CAFDA0A52A94EB7A000E0029 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		CAFDA0A62A94EB7A000E0029 /* HomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
+		CAFDA0AA2A94EBE8000E0029 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		CAFDA0AB2A94EBE8000E0029 /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
+		CAFDA0B12A94FF79000E0029 /* SpinnerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CAA48A912A9354BB001A1DCB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CAA48AA72A9354BB001A1DCB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CAA48AB12A9354BB001A1DCB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CA894E912A9C9EFA006B533E /* AthleteDetails */ = {
+			isa = PBXGroup;
+			children = (
+				CAEC524C2A9E0E690051CE0F /* ResultCell */,
+				CA894E922A9C9F2D006B533E /* AthleteDetailsViewController.swift */,
+				CA9F29342A9F5A020036418E /* AthleteDetailsViewPresenter.swift */,
+				CA9F29362A9F5A0B0036418E /* AthleteDetailsPresenter.swift */,
+			);
+			path = AthleteDetails;
+			sourceTree = "<group>";
+		};
+		CA9F29382A9F72840036418E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CA894E912A9C9EFA006B533E /* AthleteDetails */,
+				CAFDA0B02A94FF5C000E0029 /* Spinner */,
+				CAA48AC72A9354EA001A1DCB /* Home */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		CA9F293B2A9F9ECD0036418E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CA9F293C2A9F9ECD0036418E /* WebKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CAA48A8B2A9354BA001A1DCB = {
+			isa = PBXGroup;
+			children = (
+				CAA48A962A9354BB001A1DCB /* Olympic Athletes */,
+				CAA48AAD2A9354BB001A1DCB /* Olympic AthletesTests */,
+				CAA48AB72A9354BB001A1DCB /* Olympic AthletesUITests */,
+				CAA48A952A9354BB001A1DCB /* Products */,
+				CA9F293B2A9F9ECD0036418E /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		CAA48A952A9354BB001A1DCB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CAA48A942A9354BB001A1DCB /* Olympic Athletes.app */,
+				CAA48AAA2A9354BB001A1DCB /* Olympic AthletesTests.xctest */,
+				CAA48AB42A9354BB001A1DCB /* Olympic AthletesUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CAA48A962A9354BB001A1DCB /* Olympic Athletes */ = {
+			isa = PBXGroup;
+			children = (
+				CA9F29382A9F72840036418E /* Controllers */,
+				CAEC52512A9E1D9A0051CE0F /* Views */,
+				CAA48AD12A93580C001A1DCB /* Network */,
+				CAA48ACE2A9355EC001A1DCB /* Models */,
+				CAA48A972A9354BB001A1DCB /* AppDelegate.swift */,
+				CAA48A992A9354BB001A1DCB /* SceneDelegate.swift */,
+				CAA48A9D2A9354BB001A1DCB /* Main.storyboard */,
+				CAA48AA02A9354BB001A1DCB /* Assets.xcassets */,
+				CAA48AA22A9354BB001A1DCB /* LaunchScreen.storyboard */,
+				CAA48AA52A9354BB001A1DCB /* Info.plist */,
+				CAE1F3BB2A95E50F00A7C31B /* CarouselFlowLayout.swift */,
+			);
+			path = "Olympic Athletes";
+			sourceTree = "<group>";
+		};
+		CAA48AAD2A9354BB001A1DCB /* Olympic AthletesTests */ = {
+			isa = PBXGroup;
+			children = (
+				CAA48AAE2A9354BB001A1DCB /* Olympic_AthletesTests.swift */,
+			);
+			path = "Olympic AthletesTests";
+			sourceTree = "<group>";
+		};
+		CAA48AB72A9354BB001A1DCB /* Olympic AthletesUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CAA48AB82A9354BB001A1DCB /* Olympic_AthletesUITests.swift */,
+				CAA48ABA2A9354BB001A1DCB /* Olympic_AthletesUITestsLaunchTests.swift */,
+			);
+			path = "Olympic AthletesUITests";
+			sourceTree = "<group>";
+		};
+		CAA48AC72A9354EA001A1DCB /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				CAFDA0A92A94EB7F000E0029 /* Cells */,
+				CAA48AC82A9354FC001A1DCB /* HomeViewController.swift */,
+				CAA48ACA2A93550D001A1DCB /* HomeViewPresenter.swift */,
+				CAA48ACC2A935516001A1DCB /* HomePresenter.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		CAA48ACE2A9355EC001A1DCB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CAA48ACF2A9355F5001A1DCB /* HomeData.swift */,
+				CAA48ADB2A93AD1C001A1DCB /* Athlete.swift */,
+				CAA48ADD2A93AD79001A1DCB /* Game.swift */,
+				CAFDA09F2A949FF3000E0029 /* AthleteResut.swift */,
+				CAFDA0A12A94A9B3000E0029 /* APIResponse.swift */,
+				CADD191F2A9741A90096A1C1 /* NetworkError.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CAA48AD12A93580C001A1DCB /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				CAA48AD22A93581C001A1DCB /* APIClient.swift */,
+				CAA48AD62A93ACD2001A1DCB /* Requests */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		CAA48AD62A93ACD2001A1DCB /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				CAA48AD72A93ACE8001A1DCB /* APIRequest.swift */,
+				CAA48AD92A93AD03001A1DCB /* AthletesRequest.swift */,
+				CAFDA0972A94968F000E0029 /* GamesRequest.swift */,
+				CAFDA0992A9499E0000E0029 /* AthleteRequest.swift */,
+				CAFDA09B2A949EE1000E0029 /* AthletePhotoRequest.swift */,
+				CAFDA09D2A949FA9000E0029 /* AthleteResultsRequest.swift */,
+				CAFDA0A32A94BB31000E0029 /* GameAthletesRequest.swift */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		CAEC524C2A9E0E690051CE0F /* ResultCell */ = {
+			isa = PBXGroup;
+			children = (
+				CAEC524D2A9E0E8C0051CE0F /* ResultCell.swift */,
+				CAEC524E2A9E0E8C0051CE0F /* ResultCell.xib */,
+			);
+			path = ResultCell;
+			sourceTree = "<group>";
+		};
+		CAEC52512A9E1D9A0051CE0F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CAEC52522A9E1DBE0051CE0F /* MedalView.swift */,
+				CAEC52542A9E1FB30051CE0F /* MedalView.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CAFDA0A92A94EB7F000E0029 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				CAFDA0AF2A94EBFC000E0029 /* CollectionViewCell */,
+				CAFDA0AE2A94EBEF000E0029 /* HomeTableViewCell */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		CAFDA0AE2A94EBEF000E0029 /* HomeTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				CAFDA0A52A94EB7A000E0029 /* HomeTableViewCell.swift */,
+				CAFDA0A62A94EB7A000E0029 /* HomeTableViewCell.xib */,
+			);
+			path = HomeTableViewCell;
+			sourceTree = "<group>";
+		};
+		CAFDA0AF2A94EBFC000E0029 /* CollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				CAFDA0AA2A94EBE8000E0029 /* CollectionViewCell.swift */,
+				CAFDA0AB2A94EBE8000E0029 /* CollectionViewCell.xib */,
+			);
+			path = CollectionViewCell;
+			sourceTree = "<group>";
+		};
+		CAFDA0B02A94FF5C000E0029 /* Spinner */ = {
+			isa = PBXGroup;
+			children = (
+				CAFDA0B12A94FF79000E0029 /* SpinnerViewController.swift */,
+			);
+			path = Spinner;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CAA48A932A9354BB001A1DCB /* Olympic Athletes */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CAA48ABE2A9354BB001A1DCB /* Build configuration list for PBXNativeTarget "Olympic Athletes" */;
+			buildPhases = (
+				CAA48A902A9354BB001A1DCB /* Sources */,
+				CAA48A912A9354BB001A1DCB /* Frameworks */,
+				CAA48A922A9354BB001A1DCB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Olympic Athletes";
+			productName = "Olympic Athletes";
+			productReference = CAA48A942A9354BB001A1DCB /* Olympic Athletes.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CAA48AA92A9354BB001A1DCB /* Olympic AthletesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CAA48AC12A9354BB001A1DCB /* Build configuration list for PBXNativeTarget "Olympic AthletesTests" */;
+			buildPhases = (
+				CAA48AA62A9354BB001A1DCB /* Sources */,
+				CAA48AA72A9354BB001A1DCB /* Frameworks */,
+				CAA48AA82A9354BB001A1DCB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CAA48AAC2A9354BB001A1DCB /* PBXTargetDependency */,
+			);
+			name = "Olympic AthletesTests";
+			productName = "Olympic AthletesTests";
+			productReference = CAA48AAA2A9354BB001A1DCB /* Olympic AthletesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CAA48AB32A9354BB001A1DCB /* Olympic AthletesUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CAA48AC42A9354BB001A1DCB /* Build configuration list for PBXNativeTarget "Olympic AthletesUITests" */;
+			buildPhases = (
+				CAA48AB02A9354BB001A1DCB /* Sources */,
+				CAA48AB12A9354BB001A1DCB /* Frameworks */,
+				CAA48AB22A9354BB001A1DCB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CAA48AB62A9354BB001A1DCB /* PBXTargetDependency */,
+			);
+			name = "Olympic AthletesUITests";
+			productName = "Olympic AthletesUITests";
+			productReference = CAA48AB42A9354BB001A1DCB /* Olympic AthletesUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CAA48A8C2A9354BA001A1DCB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					CAA48A932A9354BB001A1DCB = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+					CAA48AA92A9354BB001A1DCB = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = CAA48A932A9354BB001A1DCB;
+					};
+					CAA48AB32A9354BB001A1DCB = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = CAA48A932A9354BB001A1DCB;
+					};
+				};
+			};
+			buildConfigurationList = CAA48A8F2A9354BA001A1DCB /* Build configuration list for PBXProject "Olympic Athletes" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CAA48A8B2A9354BA001A1DCB;
+			productRefGroup = CAA48A952A9354BB001A1DCB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CAA48A932A9354BB001A1DCB /* Olympic Athletes */,
+				CAA48AA92A9354BB001A1DCB /* Olympic AthletesTests */,
+				CAA48AB32A9354BB001A1DCB /* Olympic AthletesUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CAA48A922A9354BB001A1DCB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAA48AA42A9354BB001A1DCB /* LaunchScreen.storyboard in Resources */,
+				CAA48AA12A9354BB001A1DCB /* Assets.xcassets in Resources */,
+				CAFDA0A82A94EB7A000E0029 /* HomeTableViewCell.xib in Resources */,
+				CAA48A9F2A9354BB001A1DCB /* Main.storyboard in Resources */,
+				CAEC52502A9E0E8C0051CE0F /* ResultCell.xib in Resources */,
+				CAEC52552A9E1FB30051CE0F /* MedalView.xib in Resources */,
+				CAFDA0AD2A94EBE8000E0029 /* CollectionViewCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CAA48AA82A9354BB001A1DCB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CAA48AB22A9354BB001A1DCB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CAA48A902A9354BB001A1DCB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAFDA0B22A94FF79000E0029 /* SpinnerViewController.swift in Sources */,
+				CAFDA0A02A949FF3000E0029 /* AthleteResut.swift in Sources */,
+				CAA48A982A9354BB001A1DCB /* AppDelegate.swift in Sources */,
+				CA894E932A9C9F2D006B533E /* AthleteDetailsViewController.swift in Sources */,
+				CAA48A9A2A9354BB001A1DCB /* SceneDelegate.swift in Sources */,
+				CAA48ADE2A93AD79001A1DCB /* Game.swift in Sources */,
+				CAA48AD32A93581C001A1DCB /* APIClient.swift in Sources */,
+				CAFDA0A72A94EB7A000E0029 /* HomeTableViewCell.swift in Sources */,
+				CAEC524F2A9E0E8C0051CE0F /* ResultCell.swift in Sources */,
+				CAA48ACD2A935516001A1DCB /* HomePresenter.swift in Sources */,
+				CADD19202A9741A90096A1C1 /* NetworkError.swift in Sources */,
+				CAA48AD02A9355F5001A1DCB /* HomeData.swift in Sources */,
+				CAFDA09C2A949EE1000E0029 /* AthletePhotoRequest.swift in Sources */,
+				CAE1F3BC2A95E50F00A7C31B /* CarouselFlowLayout.swift in Sources */,
+				CA9F29352A9F5A020036418E /* AthleteDetailsViewPresenter.swift in Sources */,
+				CAFDA09E2A949FA9000E0029 /* AthleteResultsRequest.swift in Sources */,
+				CAFDA09A2A9499E0000E0029 /* AthleteRequest.swift in Sources */,
+				CAEC52532A9E1DBE0051CE0F /* MedalView.swift in Sources */,
+				CAA48ADC2A93AD1C001A1DCB /* Athlete.swift in Sources */,
+				CAA48ADA2A93AD03001A1DCB /* AthletesRequest.swift in Sources */,
+				CAFDA0A42A94BB31000E0029 /* GameAthletesRequest.swift in Sources */,
+				CAA48AC92A9354FC001A1DCB /* HomeViewController.swift in Sources */,
+				CAFDA0982A94968F000E0029 /* GamesRequest.swift in Sources */,
+				CAFDA0AC2A94EBE8000E0029 /* CollectionViewCell.swift in Sources */,
+				CAA48AD82A93ACE8001A1DCB /* APIRequest.swift in Sources */,
+				CA9F29372A9F5A0B0036418E /* AthleteDetailsPresenter.swift in Sources */,
+				CAA48ACB2A93550D001A1DCB /* HomeViewPresenter.swift in Sources */,
+				CAFDA0A22A94A9B3000E0029 /* APIResponse.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CAA48AA62A9354BB001A1DCB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAA48AAF2A9354BB001A1DCB /* Olympic_AthletesTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CAA48AB02A9354BB001A1DCB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAA48ABB2A9354BB001A1DCB /* Olympic_AthletesUITestsLaunchTests.swift in Sources */,
+				CAA48AB92A9354BB001A1DCB /* Olympic_AthletesUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CAA48AAC2A9354BB001A1DCB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CAA48A932A9354BB001A1DCB /* Olympic Athletes */;
+			targetProxy = CAA48AAB2A9354BB001A1DCB /* PBXContainerItemProxy */;
+		};
+		CAA48AB62A9354BB001A1DCB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CAA48A932A9354BB001A1DCB /* Olympic Athletes */;
+			targetProxy = CAA48AB52A9354BB001A1DCB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CAA48A9D2A9354BB001A1DCB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CAA48A9E2A9354BB001A1DCB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CAA48AA22A9354BB001A1DCB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CAA48AA32A9354BB001A1DCB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CAA48ABC2A9354BB001A1DCB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CAA48ABD2A9354BB001A1DCB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CAA48ABF2A9354BB001A1DCB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Olympic Athletes/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.codexFabri.Olympic-Athletes";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CAA48AC02A9354BB001A1DCB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Olympic Athletes/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.codexFabri.Olympic-Athletes";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CAA48AC22A9354BB001A1DCB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.codexFabri.Olympic-AthletesTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Olympic Athletes.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Olympic Athletes";
+			};
+			name = Debug;
+		};
+		CAA48AC32A9354BB001A1DCB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.codexFabri.Olympic-AthletesTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Olympic Athletes.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Olympic Athletes";
+			};
+			name = Release;
+		};
+		CAA48AC52A9354BB001A1DCB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.codexFabri.Olympic-AthletesUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Olympic Athletes";
+			};
+			name = Debug;
+		};
+		CAA48AC62A9354BB001A1DCB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.codexFabri.Olympic-AthletesUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Olympic Athletes";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CAA48A8F2A9354BA001A1DCB /* Build configuration list for PBXProject "Olympic Athletes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CAA48ABC2A9354BB001A1DCB /* Debug */,
+				CAA48ABD2A9354BB001A1DCB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CAA48ABE2A9354BB001A1DCB /* Build configuration list for PBXNativeTarget "Olympic Athletes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CAA48ABF2A9354BB001A1DCB /* Debug */,
+				CAA48AC02A9354BB001A1DCB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CAA48AC12A9354BB001A1DCB /* Build configuration list for PBXNativeTarget "Olympic AthletesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CAA48AC22A9354BB001A1DCB /* Debug */,
+				CAA48AC32A9354BB001A1DCB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CAA48AC42A9354BB001A1DCB /* Build configuration list for PBXNativeTarget "Olympic AthletesUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CAA48AC52A9354BB001A1DCB /* Debug */,
+				CAA48AC62A9354BB001A1DCB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CAA48A8C2A9354BA001A1DCB /* Project object */;
+}
