@@ -12,8 +12,19 @@ public typealias ResultCallback<Value> = (Result<Value, Error>) -> Void
 /// Implementation of a generic-based API client
 public class APIClient {
     private let baseEndpointUrl = URL(string: "https://ocs-test-backend.onrender.com/")!
-    private let session = URLSession(configuration: .default)
-
+    
+    private var sessionConfiguration: URLSessionConfiguration {
+        let sessionConfiguration = URLSessionConfiguration.default
+        sessionConfiguration.timeoutIntervalForRequest = 60
+        sessionConfiguration.timeoutIntervalForRequest = 120
+        return sessionConfiguration
+    }
+    
+    private var session: URLSession {
+        let session = URLSession(configuration: self.sessionConfiguration)
+        return session
+    }
+    
     /// Encodes a URL based on the given request
     public func endpoint<T: APIRequest>(for request: T) -> URL {
         guard let baseUrl = URL(string: request.resource, relativeTo: baseEndpointUrl),
@@ -28,9 +39,7 @@ public class APIClient {
     /// Sends a request to servers, calling the completion method when finished
     public func send<T: APIRequest>(_ request: T, completion: @escaping ResultCallback<T.Response>) {
         let endpoint = self.endpoint(for: request)
-
-        /// Uncomment to extend timeout interval for request
-        // session.configuration.timeoutIntervalForRequest = 120
+        
         self.session.dataTask(with: URLRequest(url: endpoint)) { data, response, error in
             
             if let data {

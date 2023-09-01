@@ -191,9 +191,15 @@ internal class HomePresenter: HomeViewPresenter {
             guard let results = athlete.results else { break }
             
             for result in results {
-                if resultsPerAthlets.contains(where: { $0.athlete == athlete }) { continue }
+                if resultsPerAthlets.contains(where: { $0.athlete == athlete }) {
+                    let score: Int = self.evaluateScore(result: result)
+                    if let index = resultsPerAthlets.firstIndex(where: { $0.athlete.athlete_id == athlete.athlete_id }) {
+                        resultsPerAthlets[index].score += score
+                    }
+                    continue
+                }
 
-                let score: Int = (result.gold ?? 0) + (result.silver ?? 0) + (result.bronze ?? 0)
+                let score: Int = self.evaluateScore(result: result)
                 resultsPerAthlets.append((athlete: athlete, score: score))
             }
         }
@@ -205,6 +211,10 @@ internal class HomePresenter: HomeViewPresenter {
         }
 
         return sortedAthletes
+    }
+    
+    private func evaluateScore(result: AthleteResut) -> Int {
+        ((result.gold ?? 0) * 5) + ((result.silver ?? 0) * 3) + (result.bronze ?? 0)
     }
     
 }
