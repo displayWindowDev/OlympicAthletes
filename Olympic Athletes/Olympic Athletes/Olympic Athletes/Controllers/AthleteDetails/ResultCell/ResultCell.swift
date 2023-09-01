@@ -15,6 +15,15 @@ internal class ResultCell: UITableViewCell {
     @IBOutlet private weak var silverMedal: MedalView!
     @IBOutlet private weak var bronzeMedal: MedalView!
     
+    @IBOutlet private weak var containerView: UIView!
+    
+    override
+    internal func awakeFromNib() {
+        super.awakeFromNib()
+
+        self.containerView.layer.cornerRadius = 22.0
+    }
+    
     internal func configure(athleteResult: AthleteResut) {
         self.gameLabel.text = athleteResult.city
         

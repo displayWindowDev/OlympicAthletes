@@ -30,7 +30,7 @@ internal class HomeTableViewCell: UITableViewCell {
         
         layout.sideItemAlpha = 0.5
         layout.sideItemScale = 0.5
-        layout.spacingMode = .overlap(visibleOffset: 64.0)
+        layout.spacingMode = .overlap(visibleOffset: 32.0)
         
         self.athletesCollectionView.delegate = self
         self.athletesCollectionView.dataSource = self
@@ -66,9 +66,8 @@ extension HomeTableViewCell: UICollectionViewDelegate, UICollectionViewDataSourc
         guard let athleteCell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as? CollectionViewCell else { return UICollectionViewCell() }
         guard let imageData = self.gameAthletes[indexPath.item].imageData else { return UICollectionViewCell() }
         
-        let athleteName = "\(self.gameAthletes[indexPath.item].name ?? "") \(self.gameAthletes[indexPath.item].surname ?? "")"
-        athleteCell.configure(with: athleteName, athletePhoto: UIImage(data: imageData))
-        
+        athleteCell.configure(with: self.gameAthletes[indexPath.item], athletePhoto: UIImage(data: imageData))
+
         return athleteCell
     }
 

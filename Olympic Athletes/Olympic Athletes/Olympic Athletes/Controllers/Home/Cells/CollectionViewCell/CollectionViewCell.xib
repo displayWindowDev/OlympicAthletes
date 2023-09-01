@@ -3,7 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -16,41 +16,91 @@
                 <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vit-L2-Hmn">
-                        <rect key="frame" x="50" y="16" width="150" height="150"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R9l-9F-ZYb">
+                        <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vit-L2-Hmn">
+                                <rect key="frame" x="50" y="16" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="AnO-eb-fMK"/>
+                                    <constraint firstAttribute="width" secondItem="vit-L2-Hmn" secondAttribute="height" multiplier="1:1" id="Wzb-dC-OoE"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Glb-LU-dUI">
+                                <rect key="frame" x="106" y="193.66666666666666" width="38" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" name="BlueText"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Surname" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VKq-Ji-QVU">
+                                <rect key="frame" x="89.333333333333314" y="214.66666666666666" width="71.666666666666686" height="19.333333333333343"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <color key="textColor" name="BlueText"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m01-kX-ZZM" customClass="MedalView" customModule="Olympic_Athletes" customModuleProvider="target">
+                                <rect key="frame" x="210" y="103" width="44" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="o3p-ZO-4om"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vvM-vF-sx8" customClass="MedalView" customModule="Olympic_Athletes" customModuleProvider="target">
+                                <rect key="frame" x="174" y="16" width="44" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="FUs-iL-b9b"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QHP-DZ-N2b" customClass="MedalView" customModule="Olympic_Athletes" customModuleProvider="target">
+                                <rect key="frame" x="174" y="190" width="44" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="IZL-OR-Y5L"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.60784313725490191" green="0.60784313725490191" blue="0.61960784313725492" alpha="0.14742772108843538" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="150" id="AnO-eb-fMK"/>
-                            <constraint firstAttribute="width" secondItem="vit-L2-Hmn" secondAttribute="height" multiplier="1:1" id="Wzb-dC-OoE"/>
+                            <constraint firstItem="vit-L2-Hmn" firstAttribute="top" secondItem="R9l-9F-ZYb" secondAttribute="top" constant="16" id="2QZ-V5-wAJ"/>
+                            <constraint firstItem="vvM-vF-sx8" firstAttribute="top" secondItem="R9l-9F-ZYb" secondAttribute="top" constant="16" id="4Y3-56-vy5"/>
+                            <constraint firstItem="VKq-Ji-QVU" firstAttribute="centerX" secondItem="R9l-9F-ZYb" secondAttribute="centerX" id="89L-Bk-ey1"/>
+                            <constraint firstAttribute="bottom" secondItem="VKq-Ji-QVU" secondAttribute="bottom" constant="16" id="Bsu-LY-04z"/>
+                            <constraint firstItem="vvM-vF-sx8" firstAttribute="width" secondItem="vvM-vF-sx8" secondAttribute="height" multiplier="1:1" id="Bwl-LZ-WuI"/>
+                            <constraint firstItem="Glb-LU-dUI" firstAttribute="top" relation="greaterThanOrEqual" secondItem="vit-L2-Hmn" secondAttribute="bottom" constant="16" id="MOG-mn-Kn3"/>
+                            <constraint firstItem="VKq-Ji-QVU" firstAttribute="top" secondItem="Glb-LU-dUI" secondAttribute="bottom" constant="4" id="WzE-qe-RTP"/>
+                            <constraint firstItem="m01-kX-ZZM" firstAttribute="centerY" secondItem="R9l-9F-ZYb" secondAttribute="centerY" id="ao6-Jc-xuG"/>
+                            <constraint firstItem="QHP-DZ-N2b" firstAttribute="width" secondItem="QHP-DZ-N2b" secondAttribute="height" multiplier="1:1" id="cim-vK-1PY"/>
+                            <constraint firstItem="m01-kX-ZZM" firstAttribute="width" secondItem="m01-kX-ZZM" secondAttribute="height" multiplier="1:1" id="cwQ-NL-IZu"/>
+                            <constraint firstItem="vit-L2-Hmn" firstAttribute="centerX" secondItem="R9l-9F-ZYb" secondAttribute="centerX" id="jvn-rb-NCq"/>
+                            <constraint firstAttribute="trailing" secondItem="QHP-DZ-N2b" secondAttribute="trailing" constant="32" id="kgL-24-0Nj"/>
+                            <constraint firstItem="Glb-LU-dUI" firstAttribute="centerX" secondItem="R9l-9F-ZYb" secondAttribute="centerX" id="lkm-T4-XQq"/>
+                            <constraint firstAttribute="trailing" secondItem="m01-kX-ZZM" secondAttribute="trailing" constant="-4" id="q9b-WM-0e4"/>
+                            <constraint firstAttribute="trailing" secondItem="vvM-vF-sx8" secondAttribute="trailing" constant="32" id="uL4-6H-vyi"/>
+                            <constraint firstAttribute="bottom" secondItem="QHP-DZ-N2b" secondAttribute="bottom" constant="16" id="ueR-ID-osE"/>
                         </constraints>
-                    </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Glb-LU-dUI">
-                        <rect key="frame" x="16" y="214.66666666666666" width="218" height="19.333333333333343"/>
-                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
-                        <color key="textColor" systemColor="secondaryLabelColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                    </view>
                 </subviews>
             </view>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="Glb-LU-dUI" secondAttribute="bottom" constant="16" id="Cfc-Zu-afa"/>
-                <constraint firstItem="vit-L2-Hmn" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="L5h-NM-h3o"/>
-                <constraint firstItem="Glb-LU-dUI" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="16" id="RTs-0A-I4o"/>
-                <constraint firstItem="vit-L2-Hmn" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="16" id="Txk-N1-Mqw"/>
-                <constraint firstItem="vit-L2-Hmn" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="50" id="gx8-A8-iy2"/>
-                <constraint firstItem="Glb-LU-dUI" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="iYa-hF-20s"/>
-                <constraint firstItem="Glb-LU-dUI" firstAttribute="top" relation="greaterThanOrEqual" secondItem="vit-L2-Hmn" secondAttribute="bottom" constant="16" id="pp7-wO-tFV"/>
+                <constraint firstItem="R9l-9F-ZYb" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="MRX-KP-QD5"/>
+                <constraint firstAttribute="bottom" secondItem="R9l-9F-ZYb" secondAttribute="bottom" id="WUg-c4-aEv"/>
+                <constraint firstAttribute="trailing" secondItem="R9l-9F-ZYb" secondAttribute="trailing" id="Wh5-pd-nNs"/>
+                <constraint firstItem="R9l-9F-ZYb" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="sFH-nA-x5Z"/>
             </constraints>
             <size key="customSize" width="251" height="282"/>
             <connections>
-                <outlet property="athleteInfoLabel" destination="Glb-LU-dUI" id="PgT-wc-arS"/>
+                <outlet property="athleteNameLabel" destination="Glb-LU-dUI" id="PgT-wc-arS"/>
                 <outlet property="athletePhoto" destination="vit-L2-Hmn" id="qZw-PP-dRi"/>
+                <outlet property="athleteSurnameLabel" destination="VKq-Ji-QVU" id="Dgo-ob-otY"/>
+                <outlet property="bronzeMedalView" destination="QHP-DZ-N2b" id="xuu-zs-4RK"/>
+                <outlet property="containerView" destination="R9l-9F-ZYb" id="JWs-5D-sD4"/>
+                <outlet property="goldMedalView" destination="vvM-vF-sx8" id="x6x-ix-RrC"/>
+                <outlet property="silverMedalView" destination="m01-kX-ZZM" id="dS5-ZW-jUP"/>
             </connections>
             <point key="canvasLocation" x="132.06106870229007" y="101.40845070422536"/>
         </collectionViewCell>
     </objects>
     <resources>
-        <systemColor name="secondaryLabelColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
+        <namedColor name="BlueText">
+            <color red="0.070588235294117646" green="0.19607843137254902" blue="0.3843137254901961" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

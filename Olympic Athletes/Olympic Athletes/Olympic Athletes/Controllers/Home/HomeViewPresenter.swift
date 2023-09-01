@@ -12,7 +12,7 @@ internal protocol HomeViewPresenter: AnyObject {
     var filteredAthletesPerGame: [(game: Game, athletes: [Athlete])] { get }
     
     func retrieveHomeData(completion: @escaping RetrieveHomeDataCompletion)
-    func retrieveAthletsData(games: [Game], athletes: [Athlete], completion: @escaping RetrieveHomeDataCompletion)
+    func retrieveAthletesData(games: [Game], athletes: [Athlete], completion: @escaping RetrieveHomeDataCompletion)
     func retrieveData()
     
     func evaluateAthletes(in game: Game) -> [Athlete]

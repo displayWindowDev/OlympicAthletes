@@ -46,7 +46,6 @@
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="zJz-TV-cQV" secondAttribute="trailing" constant="6" id="HLu-8P-0oK"/>
                 <constraint firstItem="zJz-TV-cQV" firstAttribute="width" secondItem="zJz-TV-cQV" secondAttribute="height" multiplier="1:1" id="Jft-e0-gbR"/>
@@ -60,9 +59,6 @@
     </objects>
     <resources>
         <image name="medal.fill" catalog="system" width="121" height="128"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

@@ -73,7 +73,7 @@ internal class HomePresenter: HomeViewPresenter {
     
     /// Retrieve athletes photos, results and games they raced
     /// - Parameter completion: RetrieveHomeDataCompletion
-    internal func retrieveAthletsData(games: [Game], athletes: [Athlete], completion: @escaping RetrieveHomeDataCompletion) {
+    internal func retrieveAthletesData(games: [Game], athletes: [Athlete], completion: @escaping RetrieveHomeDataCompletion) {
         
         let queue = DispatchGroup()
         let homeData = HomeData()
@@ -137,7 +137,7 @@ internal class HomePresenter: HomeViewPresenter {
             self.homeData?.games = homeData.games.sorted { $0.year ?? 0 > $1.year ?? 0 }
             self.homeData?.athletes = homeData.athletes
             
-            self.retrieveAthletsData(games: homeData.games, athletes: homeData.athletes) { homeData in
+            self.retrieveAthletesData(games: homeData.games, athletes: homeData.athletes) { homeData in
                 self.view?.hideLoader()
                 
                 self.homeData?.athletesImages = homeData.athletesImages
@@ -185,28 +185,28 @@ internal class HomePresenter: HomeViewPresenter {
     internal func sortByResult(athletes: [Athlete]) -> [Athlete] {
         
         var sortedAthletes: [Athlete] = []
-        var resultsPerAthlets: [(athlete: Athlete, score: Int)] = []
+        var resultsPerAthletes: [(athlete: Athlete, score: Int)] = []
         
         for athlete in athletes {
             guard let results = athlete.results else { break }
             
             for result in results {
-                if resultsPerAthlets.contains(where: { $0.athlete == athlete }) {
+                if resultsPerAthletes.contains(where: { $0.athlete == athlete }) {
                     let score: Int = self.evaluateScore(result: result)
-                    if let index = resultsPerAthlets.firstIndex(where: { $0.athlete.athlete_id == athlete.athlete_id }) {
-                        resultsPerAthlets[index].score += score
+                    if let index = resultsPerAthletes.firstIndex(where: { $0.athlete.athlete_id == athlete.athlete_id }) {
+                        resultsPerAthletes[index].score += score
                     }
                     continue
                 }
 
                 let score: Int = self.evaluateScore(result: result)
-                resultsPerAthlets.append((athlete: athlete, score: score))
+                resultsPerAthletes.append((athlete: athlete, score: score))
             }
         }
         
-        resultsPerAthlets.sort { $0.score > $1.score }
+        resultsPerAthletes.sort { $0.score > $1.score }
 
-        resultsPerAthlets.forEach { element in
+        resultsPerAthletes.forEach { element in
             sortedAthletes.append(element.athlete)
         }
 

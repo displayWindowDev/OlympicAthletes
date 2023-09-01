@@ -3,68 +3,80 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="ResultCell" customModule="Olympic_Athletes" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="52"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="52"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xZr-Lh-HAo">
-                        <rect key="frame" x="15" y="12.333333333333334" width="109" height="19.333333333333329"/>
-                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="kAa-nb-GJa">
-                        <rect key="frame" x="140" y="0.0" width="164" height="44"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Je-uM-10N">
+                        <rect key="frame" x="8" y="4" width="304" height="44"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w4W-Fb-pkh" customClass="MedalView" customModule="Olympic_Athletes" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xZr-Lh-HAo">
+                                <rect key="frame" x="15.999999999999996" y="12.333333333333334" width="40.666666666666657" height="19.333333333333329"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                <color key="textColor" name="BlueText"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="kAa-nb-GJa">
+                                <rect key="frame" x="132" y="0.0" width="164" height="44"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w4W-Fb-pkh" customClass="MedalView" customModule="Olympic_Athletes" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="lpd-7o-9EE"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RAf-FY-33K" customClass="MedalView" customModule="Olympic_Athletes" customModuleProvider="target">
+                                        <rect key="frame" x="60" y="0.0" width="44" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="2My-GM-gzF"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pkR-P1-Nf5" customClass="MedalView" customModule="Olympic_Athletes" customModuleProvider="target">
+                                        <rect key="frame" x="120" y="0.0" width="44" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="kwO-P1-xbo"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="lpd-7o-9EE"/>
+                                    <constraint firstItem="pkR-P1-Nf5" firstAttribute="width" secondItem="pkR-P1-Nf5" secondAttribute="height" multiplier="1:1" id="OwA-Jn-aW8"/>
+                                    <constraint firstItem="RAf-FY-33K" firstAttribute="width" secondItem="RAf-FY-33K" secondAttribute="height" multiplier="1:1" id="teT-Zu-ao9"/>
+                                    <constraint firstItem="w4W-Fb-pkh" firstAttribute="width" secondItem="w4W-Fb-pkh" secondAttribute="height" multiplier="1:1" id="zpV-3h-es9"/>
                                 </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RAf-FY-33K" customClass="MedalView" customModule="Olympic_Athletes" customModuleProvider="target">
-                                <rect key="frame" x="60" y="0.0" width="44" height="44"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="2My-GM-gzF"/>
-                                </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pkR-P1-Nf5" customClass="MedalView" customModule="Olympic_Athletes" customModuleProvider="target">
-                                <rect key="frame" x="120" y="0.0" width="44" height="44"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="kwO-P1-xbo"/>
-                                </constraints>
-                            </view>
+                            </stackView>
                         </subviews>
+                        <color key="backgroundColor" red="0.60784313725490191" green="0.60784313725490191" blue="0.61960784313725492" alpha="0.15452274659863946" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="pkR-P1-Nf5" firstAttribute="width" secondItem="pkR-P1-Nf5" secondAttribute="height" multiplier="1:1" id="OwA-Jn-aW8"/>
-                            <constraint firstItem="RAf-FY-33K" firstAttribute="width" secondItem="RAf-FY-33K" secondAttribute="height" multiplier="1:1" id="teT-Zu-ao9"/>
-                            <constraint firstItem="w4W-Fb-pkh" firstAttribute="width" secondItem="w4W-Fb-pkh" secondAttribute="height" multiplier="1:1" id="zpV-3h-es9"/>
+                            <constraint firstItem="kAa-nb-GJa" firstAttribute="centerY" secondItem="5Je-uM-10N" secondAttribute="centerY" id="8h8-ms-YQR"/>
+                            <constraint firstItem="xZr-Lh-HAo" firstAttribute="leading" secondItem="5Je-uM-10N" secondAttribute="leading" constant="16" id="Hct-Hg-Lu0"/>
+                            <constraint firstAttribute="trailing" secondItem="kAa-nb-GJa" secondAttribute="trailing" constant="8" id="MCT-bS-c8u"/>
+                            <constraint firstItem="kAa-nb-GJa" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="xZr-Lh-HAo" secondAttribute="trailing" constant="8" id="MfL-JI-WQD"/>
+                            <constraint firstItem="xZr-Lh-HAo" firstAttribute="centerY" secondItem="5Je-uM-10N" secondAttribute="centerY" id="cpN-t1-aTt"/>
+                            <constraint firstAttribute="bottom" secondItem="kAa-nb-GJa" secondAttribute="bottom" id="kwh-fk-MDq"/>
+                            <constraint firstItem="kAa-nb-GJa" firstAttribute="top" secondItem="5Je-uM-10N" secondAttribute="top" id="qEW-9X-uPe"/>
                         </constraints>
-                    </stackView>
+                    </view>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="kAa-nb-GJa" firstAttribute="leading" secondItem="xZr-Lh-HAo" secondAttribute="trailing" constant="16" id="4Sv-rM-H7I"/>
-                    <constraint firstItem="xZr-Lh-HAo" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="K6k-Qc-66r"/>
-                    <constraint firstAttribute="trailing" secondItem="kAa-nb-GJa" secondAttribute="trailing" constant="16" id="L6L-HA-EZp"/>
-                    <constraint firstItem="xZr-Lh-HAo" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Nwd-5K-b99"/>
-                    <constraint firstAttribute="bottom" secondItem="kAa-nb-GJa" secondAttribute="bottom" id="jjR-EA-rPn"/>
-                    <constraint firstItem="kAa-nb-GJa" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="o4u-qy-FdZ"/>
+                    <constraint firstAttribute="bottom" secondItem="5Je-uM-10N" secondAttribute="bottom" constant="4" id="Ipi-Dr-KxT"/>
+                    <constraint firstItem="5Je-uM-10N" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="OY2-8Z-epu"/>
+                    <constraint firstItem="5Je-uM-10N" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="Pes-hq-7so"/>
+                    <constraint firstAttribute="trailing" secondItem="5Je-uM-10N" secondAttribute="trailing" constant="8" id="nAG-Mw-Ocm"/>
                 </constraints>
             </tableViewCellContentView>
             <accessibility key="accessibilityConfiguration" identifier="ResultCell"/>
             <connections>
                 <outlet property="bronzeMedal" destination="pkR-P1-Nf5" id="kjP-17-ESg"/>
+                <outlet property="containerView" destination="5Je-uM-10N" id="86c-GY-g68"/>
                 <outlet property="gameLabel" destination="xZr-Lh-HAo" id="fvv-EW-9Fs"/>
                 <outlet property="goldMedal" destination="w4W-Fb-pkh" id="tBQ-bU-N80"/>
                 <outlet property="silverMedal" destination="RAf-FY-33K" id="eql-mr-zVf"/>
@@ -73,8 +85,8 @@
         </tableViewCell>
     </objects>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <namedColor name="BlueText">
+            <color red="0.070588235294117646" green="0.19607843137254902" blue="0.3843137254901961" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

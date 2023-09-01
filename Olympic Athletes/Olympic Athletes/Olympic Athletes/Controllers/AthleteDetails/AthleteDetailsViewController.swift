@@ -31,7 +31,7 @@ internal class AthleteDetailsViewController: UIViewController {
     
     private var webView: WKWebView!
     private var tableViewHeight: CGFloat {
-        44.0 * CGFloat(self.athlete?.results?.count ?? 0)
+        52.0 * CGFloat(self.athlete?.results?.count ?? 0)
     }
     
     override
@@ -77,10 +77,10 @@ internal class AthleteDetailsViewController: UIViewController {
             }
         }
         
-        self.nameLabel.text = "Name: \(athlete.name ?? "") \(athlete.surname ?? "")"
-        self.dateOfBirthLabel.text = "Date of birth: \(athlete.dateOfBirth ?? "")"
-        self.weightLabel.text = "Weight: \(athlete.weight ?? 0) kg"
-        self.heightLabel.text = "Height: \(athlete.height ?? 0) cm"
+        self.nameLabel.text = "\(athlete.name ?? "") \(athlete.surname ?? "")"
+        self.dateOfBirthLabel.text = "\(athlete.dateOfBirth ?? "")"
+        self.weightLabel.text = "\(athlete.weight ?? 0) kg"
+        self.heightLabel.text = "\(athlete.height ?? 0) cm"
         
         self.bioTextView.text = athlete.bio
     }
