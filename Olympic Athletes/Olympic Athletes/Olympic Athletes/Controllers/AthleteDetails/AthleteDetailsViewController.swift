@@ -7,6 +7,7 @@
 
 import UIKit
 import WebKit
+import SwiftUI
 
 internal class AthleteDetailsViewController: UIViewController {
 
@@ -57,7 +58,6 @@ internal class AthleteDetailsViewController: UIViewController {
         super.viewWillLayoutSubviews()
         
         self.tableViewHeightContraint.constant = self.tableViewHeight
-        self.setTextView()
     }
     
     private func setTableView() {
@@ -81,13 +81,6 @@ internal class AthleteDetailsViewController: UIViewController {
         self.dateOfBirthLabel.text = "\(athlete.dateOfBirth ?? "")"
         self.weightLabel.text = "\(athlete.weight ?? 0) kg"
         self.heightLabel.text = "\(athlete.height ?? 0) cm"
-        
-        self.bioTextView.text = athlete.bio
-    }
-    
-    private func setTextView() {
-        self.bioTextView.sizeToFit()
-        self.bioTextView.isScrollEnabled = false
     }
     
     private func setWebView() {
@@ -97,6 +90,10 @@ internal class AthleteDetailsViewController: UIViewController {
         
         self.webView = WKWebView(frame: self.webViewContainer.bounds, configuration: webViewConfiguration)
         self.webViewContainer.addSubview(self.webView)
+    }
+    
+    @IBSegueAction private func embedHostingViewController(_ coder: NSCoder) -> UIViewController? {
+        UIHostingController(coder: coder, rootView: MarkDownTextView(markdownText: LocalizedStringKey(self.athlete?.bio ?? "")))
     }
     
 }

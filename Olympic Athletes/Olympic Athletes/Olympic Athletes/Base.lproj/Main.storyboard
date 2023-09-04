@@ -80,10 +80,10 @@
                                 <rect key="frame" x="0.0" y="103" width="393" height="715"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ncf-qY-0Tu">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="953.66666666666663"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="1053.6666666666667"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="rue-RB-tCd">
-                                                <rect key="frame" x="16" y="16" width="361" height="921.66666666666663"/>
+                                                <rect key="frame" x="16" y="15.999999999999943" width="361" height="1021.6666666666665"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gHI-E2-Dsl">
                                                         <rect key="frame" x="0.0" y="0.0" width="361" height="150"/>
@@ -156,14 +156,24 @@
                                                             <constraint firstAttribute="width" secondItem="ruo-XT-G1M" secondAttribute="height" multiplier="16:9" id="rWT-NH-ifo"/>
                                                         </constraints>
                                                     </view>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bio" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dFz-0c-ZMB">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Biography" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dFz-0c-ZMB">
                                                         <rect key="frame" x="0.0" y="579.33333333333337" width="361" height="26.333333333333371"/>
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
                                                         <color key="textColor" name="BlueText"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
+                                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2hi-Ob-181">
+                                                        <rect key="frame" x="0.0" y="622" width="361" height="400"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="400" id="WIb-Rs-5Py"/>
+                                                        </constraints>
+                                                        <connections>
+                                                            <segue destination="eF5-99-Zls" kind="embed" destinationCreationSelector="embedHostingViewController:" id="meU-xE-gkR"/>
+                                                        </connections>
+                                                    </containerView>
                                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="uc7-NJ-2vo">
                                                         <rect key="frame" x="0.0" y="621.66666666666663" width="361" height="300"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                                         <color key="textColor" name="BlueText"/>
@@ -172,6 +182,11 @@
                                                         <dataDetectorType key="dataDetectorTypes" link="YES"/>
                                                     </textView>
                                                 </subviews>
+                                                <variation key="default">
+                                                    <mask key="subviews">
+                                                        <exclude reference="uc7-NJ-2vo"/>
+                                                    </mask>
+                                                </variation>
                                             </stackView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -221,11 +236,19 @@
             </objects>
             <point key="canvasLocation" x="1971.7557251908397" y="-2.1126760563380285"/>
         </scene>
+        <!--Hosting Controller-->
+        <scene sceneID="jn2-0q-SRB">
+            <objects>
+                <hostingController id="eF5-99-Zls" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ua4-gP-Ci8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1972" y="468"/>
+        </scene>
     </scenes>
     <resources>
         <image name="person.circle.fill" catalog="system" width="128" height="123"/>
         <namedColor name="BlueText">
-            <color red="0.070588235294117646" green="0.19607843137254902" blue="0.3843137254901961" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.071000002324581146" green="0.19599999487400055" blue="0.38400000333786011" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="secondaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>

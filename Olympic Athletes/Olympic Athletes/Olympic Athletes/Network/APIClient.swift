@@ -13,18 +13,8 @@ public typealias ResultCallback<Value> = (Result<Value, Error>) -> Void
 public class APIClient {
     private let baseEndpointUrl = URL(string: "https://ocs-test-backend.onrender.com/")!
     
-    private var sessionConfiguration: URLSessionConfiguration {
-        let sessionConfiguration = URLSessionConfiguration.default
-        sessionConfiguration.timeoutIntervalForRequest = 60
-        sessionConfiguration.timeoutIntervalForRequest = 120
-        return sessionConfiguration
-    }
-    
-    private var session: URLSession {
-        let session = URLSession(configuration: self.sessionConfiguration)
-        return session
-    }
-    
+    private let session = URLSession(configuration: .default)
+
     /// Encodes a URL based on the given request
     public func endpoint<T: APIRequest>(for request: T) -> URL {
         guard let baseUrl = URL(string: request.resource, relativeTo: baseEndpointUrl),

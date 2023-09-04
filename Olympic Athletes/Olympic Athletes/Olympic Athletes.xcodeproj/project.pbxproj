@@ -10,6 +10,7 @@
 		CA894E932A9C9F2D006B533E /* AthleteDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA894E922A9C9F2D006B533E /* AthleteDetailsViewController.swift */; };
 		CA9F29352A9F5A020036418E /* AthleteDetailsViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9F29342A9F5A020036418E /* AthleteDetailsViewPresenter.swift */; };
 		CA9F29372A9F5A0B0036418E /* AthleteDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9F29362A9F5A0B0036418E /* AthleteDetailsPresenter.swift */; };
+		CA9FFACC2AA61B5E008E7E7F /* MarkDownTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9FFACB2AA61B5E008E7E7F /* MarkDownTextView.swift */; };
 		CAA48A982A9354BB001A1DCB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA48A972A9354BB001A1DCB /* AppDelegate.swift */; };
 		CAA48A9A2A9354BB001A1DCB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA48A992A9354BB001A1DCB /* SceneDelegate.swift */; };
 		CAA48A9F2A9354BB001A1DCB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAA48A9D2A9354BB001A1DCB /* Main.storyboard */; };
@@ -69,6 +70,7 @@
 		CA9F29342A9F5A020036418E /* AthleteDetailsViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AthleteDetailsViewPresenter.swift; sourceTree = "<group>"; };
 		CA9F29362A9F5A0B0036418E /* AthleteDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AthleteDetailsPresenter.swift; sourceTree = "<group>"; };
 		CA9F293C2A9F9ECD0036418E /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		CA9FFACB2AA61B5E008E7E7F /* MarkDownTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkDownTextView.swift; sourceTree = "<group>"; };
 		CAA48A942A9354BB001A1DCB /* Olympic Athletes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Olympic Athletes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAA48A972A9354BB001A1DCB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CAA48A992A9354BB001A1DCB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -135,6 +137,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CA7FE7792AA226200017D20F /* MedalView */ = {
+			isa = PBXGroup;
+			children = (
+				CAEC52522A9E1DBE0051CE0F /* MedalView.swift */,
+				CAEC52542A9E1FB30051CE0F /* MedalView.xib */,
+			);
+			path = MedalView;
+			sourceTree = "<group>";
+		};
 		CA894E912A9C9EFA006B533E /* AthleteDetails */ = {
 			isa = PBXGroup;
 			children = (
@@ -279,8 +290,8 @@
 		CAEC52512A9E1D9A0051CE0F /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				CAEC52522A9E1DBE0051CE0F /* MedalView.swift */,
-				CAEC52542A9E1FB30051CE0F /* MedalView.xib */,
+				CA7FE7792AA226200017D20F /* MedalView */,
+				CA9FFACB2AA61B5E008E7E7F /* MarkDownTextView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -463,6 +474,7 @@
 				CAA48ADE2A93AD79001A1DCB /* Game.swift in Sources */,
 				CAA48AD32A93581C001A1DCB /* APIClient.swift in Sources */,
 				CAFDA0A72A94EB7A000E0029 /* HomeTableViewCell.swift in Sources */,
+				CA9FFACC2AA61B5E008E7E7F /* MarkDownTextView.swift in Sources */,
 				CAEC524F2A9E0E8C0051CE0F /* ResultCell.swift in Sources */,
 				CAA48ACD2A935516001A1DCB /* HomePresenter.swift in Sources */,
 				CADD19202A9741A90096A1C1 /* NetworkError.swift in Sources */,
