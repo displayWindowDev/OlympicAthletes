@@ -19,7 +19,6 @@ internal class AthleteDetailsViewController: UIViewController {
     @IBOutlet private weak var heightLabel: UILabel!
     
     @IBOutlet private weak var resultsTableView: UITableView!
-    @IBOutlet private weak var bioTextView: UITextView!
     
     @IBOutlet private weak var webViewContainer: UIView!
     @IBOutlet private weak var tableViewHeightContraint: NSLayoutConstraint!

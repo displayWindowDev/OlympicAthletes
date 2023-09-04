@@ -163,7 +163,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2hi-Ob-181">
-                                                        <rect key="frame" x="0.0" y="622" width="361" height="400"/>
+                                                        <rect key="frame" x="0.0" y="621.66666666666663" width="361" height="400"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="400" id="WIb-Rs-5Py"/>
                                                         </constraints>
@@ -171,22 +171,7 @@
                                                             <segue destination="eF5-99-Zls" kind="embed" destinationCreationSelector="embedHostingViewController:" id="meU-xE-gkR"/>
                                                         </connections>
                                                     </containerView>
-                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="uc7-NJ-2vo">
-                                                        <rect key="frame" x="0.0" y="621.66666666666663" width="361" height="300"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                                        <color key="textColor" name="BlueText"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                        <dataDetectorType key="dataDetectorTypes" link="YES"/>
-                                                    </textView>
                                                 </subviews>
-                                                <variation key="default">
-                                                    <mask key="subviews">
-                                                        <exclude reference="uc7-NJ-2vo"/>
-                                                    </mask>
-                                                </variation>
                                             </stackView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -222,7 +207,6 @@
                     </navigationItem>
                     <connections>
                         <outlet property="athleteImageView" destination="OcR-YZ-OaL" id="YDU-dr-tlH"/>
-                        <outlet property="bioTextView" destination="uc7-NJ-2vo" id="MJq-wW-7Fu"/>
                         <outlet property="dateOfBirthLabel" destination="PlL-Wk-Nbk" id="OCC-kd-VTJ"/>
                         <outlet property="heightLabel" destination="E3B-an-p8x" id="Vyx-hy-22v"/>
                         <outlet property="nameLabel" destination="39O-lD-Yd3" id="4se-h7-t0f"/>
