@@ -11,7 +11,8 @@ internal class AthleteDetailsPresenter: AthleteDetailsViewPresenter {
     
     internal weak var view: AthleteDetailsView?
     
-    required internal init(view: AthleteDetailsView) {
+    required
+    internal init(view: AthleteDetailsView) {
         self.view = view
     }
     

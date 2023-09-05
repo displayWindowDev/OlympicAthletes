@@ -15,9 +15,17 @@ internal class CollectionViewCell: UICollectionViewCell {
     @IBOutlet private weak var athleteNameLabel: UILabel!
     @IBOutlet private weak var athleteSurnameLabel: UILabel!
 
-    @IBOutlet weak var goldMedalView: MedalView!
-    @IBOutlet weak var silverMedalView: MedalView!
-    @IBOutlet weak var bronzeMedalView: MedalView!
+    @IBOutlet private weak var goldMedalView: MedalView!
+    @IBOutlet private weak var silverMedalView: MedalView!
+    @IBOutlet private weak var bronzeMedalView: MedalView!
+
+    override
+    internal func awakeFromNib() {
+        super.awakeFromNib()
+
+        self.containerView.layer.cornerRadius = 125.0
+        self.athletePhoto.layer.cornerRadius = 75.0
+    }
 
     override
     internal func prepareForReuse() {
@@ -28,14 +36,6 @@ internal class CollectionViewCell: UICollectionViewCell {
         self.goldMedalView.alpha = 1.0
         self.silverMedalView.alpha = 1.0
         self.bronzeMedalView.alpha = 1.0
-    }
-    
-    override
-    internal func awakeFromNib() {
-        super.awakeFromNib()
-
-        self.containerView.layer.cornerRadius = 125.0
-        self.athletePhoto.layer.cornerRadius = 75.0
     }
     
     internal func configure(with athlete: Athlete, athletePhoto: UIImage?) {

@@ -13,7 +13,8 @@ internal class HomePresenter: HomeViewPresenter {
     
     internal weak var view: HomeView?
     
-    required internal init(view: HomeView) {
+    required
+    internal init(view: HomeView) {
         self.view = view
     }
     
@@ -22,7 +23,7 @@ internal class HomePresenter: HomeViewPresenter {
     
     /// Filter games having athletes that raced into.
     internal var filteredAthletesPerGame: [(game: Game, athletes: [Athlete])] {
-        return self.homeData?.athletesPerGame.filter({ element in
+        self.homeData?.athletesPerGame.filter({ element in
             !element.athletes.isEmpty
         }).sorted { $0.game.year ?? 0 > $1.game.year ?? 0 } ?? []
     }
@@ -182,6 +183,9 @@ internal class HomePresenter: HomeViewPresenter {
         return athletes
     }
     
+    /// Sorts the provided array of athletes by their overall score
+    /// - Parameter athletes: Array of Athletes to be sorted
+    /// - Returns: Sorted array of Athletes
     internal func sortByResult(athletes: [Athlete]) -> [Athlete] {
         
         var sortedAthletes: [Athlete] = []
@@ -213,6 +217,9 @@ internal class HomePresenter: HomeViewPresenter {
         return sortedAthletes
     }
     
+    /// Evaluates the athlete score
+    /// - Parameter result: Athlete career results
+    /// - Returns: Athlete score
     private func evaluateScore(result: AthleteResut) -> Int {
         ((result.gold ?? 0) * 5) + ((result.silver ?? 0) * 3) + (result.bronze ?? 0)
     }

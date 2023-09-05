@@ -28,7 +28,6 @@
 		CAA48ADA2A93AD03001A1DCB /* AthletesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA48AD92A93AD03001A1DCB /* AthletesRequest.swift */; };
 		CAA48ADC2A93AD1C001A1DCB /* Athlete.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA48ADB2A93AD1C001A1DCB /* Athlete.swift */; };
 		CAA48ADE2A93AD79001A1DCB /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA48ADD2A93AD79001A1DCB /* Game.swift */; };
-		CADD19202A9741A90096A1C1 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADD191F2A9741A90096A1C1 /* NetworkError.swift */; };
 		CAE1F3BC2A95E50F00A7C31B /* CarouselFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE1F3BB2A95E50F00A7C31B /* CarouselFlowLayout.swift */; };
 		CAEC524F2A9E0E8C0051CE0F /* ResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEC524D2A9E0E8C0051CE0F /* ResultCell.swift */; };
 		CAEC52502A9E0E8C0051CE0F /* ResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAEC524E2A9E0E8C0051CE0F /* ResultCell.xib */; };
@@ -39,7 +38,6 @@
 		CAFDA09C2A949EE1000E0029 /* AthletePhotoRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFDA09B2A949EE1000E0029 /* AthletePhotoRequest.swift */; };
 		CAFDA09E2A949FA9000E0029 /* AthleteResultsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFDA09D2A949FA9000E0029 /* AthleteResultsRequest.swift */; };
 		CAFDA0A02A949FF3000E0029 /* AthleteResut.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFDA09F2A949FF3000E0029 /* AthleteResut.swift */; };
-		CAFDA0A22A94A9B3000E0029 /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFDA0A12A94A9B3000E0029 /* APIResponse.swift */; };
 		CAFDA0A42A94BB31000E0029 /* GameAthletesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFDA0A32A94BB31000E0029 /* GameAthletesRequest.swift */; };
 		CAFDA0A72A94EB7A000E0029 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFDA0A52A94EB7A000E0029 /* HomeTableViewCell.swift */; };
 		CAFDA0A82A94EB7A000E0029 /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAFDA0A62A94EB7A000E0029 /* HomeTableViewCell.xib */; };
@@ -92,7 +90,6 @@
 		CAA48AD92A93AD03001A1DCB /* AthletesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AthletesRequest.swift; sourceTree = "<group>"; };
 		CAA48ADB2A93AD1C001A1DCB /* Athlete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Athlete.swift; sourceTree = "<group>"; };
 		CAA48ADD2A93AD79001A1DCB /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
-		CADD191F2A9741A90096A1C1 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		CAE1F3BB2A95E50F00A7C31B /* CarouselFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselFlowLayout.swift; sourceTree = "<group>"; };
 		CAEC524D2A9E0E8C0051CE0F /* ResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultCell.swift; sourceTree = "<group>"; };
 		CAEC524E2A9E0E8C0051CE0F /* ResultCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultCell.xib; sourceTree = "<group>"; };
@@ -103,7 +100,6 @@
 		CAFDA09B2A949EE1000E0029 /* AthletePhotoRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AthletePhotoRequest.swift; sourceTree = "<group>"; };
 		CAFDA09D2A949FA9000E0029 /* AthleteResultsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AthleteResultsRequest.swift; sourceTree = "<group>"; };
 		CAFDA09F2A949FF3000E0029 /* AthleteResut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AthleteResut.swift; sourceTree = "<group>"; };
-		CAFDA0A12A94A9B3000E0029 /* APIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponse.swift; sourceTree = "<group>"; };
 		CAFDA0A32A94BB31000E0029 /* GameAthletesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameAthletesRequest.swift; sourceTree = "<group>"; };
 		CAFDA0A52A94EB7A000E0029 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		CAFDA0A62A94EB7A000E0029 /* HomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
@@ -249,8 +245,6 @@
 				CAA48ADB2A93AD1C001A1DCB /* Athlete.swift */,
 				CAA48ADD2A93AD79001A1DCB /* Game.swift */,
 				CAFDA09F2A949FF3000E0029 /* AthleteResut.swift */,
-				CAFDA0A12A94A9B3000E0029 /* APIResponse.swift */,
-				CADD191F2A9741A90096A1C1 /* NetworkError.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -477,7 +471,6 @@
 				CA9FFACC2AA61B5E008E7E7F /* MarkDownTextView.swift in Sources */,
 				CAEC524F2A9E0E8C0051CE0F /* ResultCell.swift in Sources */,
 				CAA48ACD2A935516001A1DCB /* HomePresenter.swift in Sources */,
-				CADD19202A9741A90096A1C1 /* NetworkError.swift in Sources */,
 				CAA48AD02A9355F5001A1DCB /* HomeData.swift in Sources */,
 				CAFDA09C2A949EE1000E0029 /* AthletePhotoRequest.swift in Sources */,
 				CAE1F3BC2A95E50F00A7C31B /* CarouselFlowLayout.swift in Sources */,
@@ -494,7 +487,6 @@
 				CAA48AD82A93ACE8001A1DCB /* APIRequest.swift in Sources */,
 				CA9F29372A9F5A0B0036418E /* AthleteDetailsPresenter.swift in Sources */,
 				CAA48ACB2A93550D001A1DCB /* HomeViewPresenter.swift in Sources */,
-				CAFDA0A22A94A9B3000E0029 /* APIResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -673,6 +665,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Olympic Athletes/Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.sports";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -700,6 +693,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Olympic Athletes/Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.sports";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

@@ -7,7 +7,7 @@
 
 import Foundation
 
-/// Returns all athletes that have participated in a game, given its id
+/// Returns all athletes that have competed in a game, given its id
 internal struct GameAthletesRequest: APIRequest {
     typealias Response = [Athlete]
     

@@ -15,7 +15,7 @@ internal class HomeViewController: UIViewController {
     private lazy var spinnerViewController = SpinnerViewController()
 
     private lazy var presenter: HomeViewPresenter = {
-        return HomePresenter(view: self)
+        HomePresenter(view: self)
     }()
     
     override
@@ -50,11 +50,11 @@ internal class HomeViewController: UIViewController {
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
 
     internal func numberOfSections(in tableView: UITableView) -> Int {
-        return self.presenter.filteredAthletesPerGame.count
+        self.presenter.filteredAthletesPerGame.count
     }
 
     internal func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        1
     }
 
     internal func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -70,11 +70,11 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
 
     internal func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "\(self.presenter.filteredAthletesPerGame[section].game.city ?? "") \(self.presenter.filteredAthletesPerGame[section].game.year ?? 0)"
+        "\(self.presenter.filteredAthletesPerGame[section].game.city ?? "") \(self.presenter.filteredAthletesPerGame[section].game.year ?? 0)"
     }
     
     internal func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 280.0
+        280.0
     }
 
 }

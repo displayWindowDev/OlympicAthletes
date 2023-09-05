@@ -16,6 +16,8 @@ public class APIClient {
     private let session = URLSession(configuration: .default)
 
     /// Encodes a URL based on the given request
+    /// - Parameter request: API Request with generic type T
+    /// - Returns: Request endpoint
     public func endpoint<T: APIRequest>(for request: T) -> URL {
         guard let baseUrl = URL(string: request.resource, relativeTo: baseEndpointUrl),
               let components = URLComponents(url: baseUrl, resolvingAgainstBaseURL: true),
@@ -27,6 +29,9 @@ public class APIClient {
     }
     
     /// Sends a request to servers, calling the completion method when finished
+    /// - Parameters:
+    ///   - request: API Request with generic type T
+    ///   - completion: Request sending completion handler
     public func send<T: APIRequest>(_ request: T, completion: @escaping ResultCallback<T.Response>) {
         let endpoint = self.endpoint(for: request)
         
@@ -55,6 +60,9 @@ public class APIClient {
     }
 
     /// Sends a request to servers specifically for image data, calling the completion method when finished
+    /// - Parameters:
+    ///   - request: API Request with generic type T
+    ///   - completion: Image fetching completion handler
     public func fetchImage<T: APIRequest>(_ request: T, completion: @escaping ResultCallback<Data>) {
         let endpoint = self.endpoint(for: request)
 
@@ -72,6 +80,11 @@ public class APIClient {
         .resume()
     }
     
+    /// Parses a response from server
+    /// - Parameters:
+    ///   - request: API Request with generic type T
+    ///   - data: Data to be parsed
+    /// - Returns: Parsed response with generic type T
     public func parseResponse<T: APIRequest>(_ request: T, data: Data) throws -> T.Response {
         return try JSONDecoder().decode(T.Response.self, from: data)
     }

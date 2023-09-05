@@ -26,7 +26,7 @@ internal class AthleteDetailsViewController: UIViewController {
     internal var athlete: Athlete? = nil
 
     private lazy var presenter: AthleteDetailsViewPresenter = {
-        return AthleteDetailsPresenter(view: self)
+        AthleteDetailsPresenter(view: self)
     }()
     
     private var webView: WKWebView!
@@ -102,7 +102,7 @@ internal class AthleteDetailsViewController: UIViewController {
 extension AthleteDetailsViewController: UITableViewDelegate, UITableViewDataSource {
     
     internal func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.athlete?.results?.count ?? 0
+        self.athlete?.results?.count ?? 0
     }
 
     internal func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

@@ -18,6 +18,13 @@ internal class HomeTableViewCell: UITableViewCell {
     internal weak var homeTableViewCellDelegate: HomeTableViewCellDelegate?
     private var gameAthletes: [Athlete] = []
 
+    override
+    internal func awakeFromNib() {
+        super.awakeFromNib()
+        
+        self.setCollectionView()
+    }
+    
     private func setCollectionView() {
         self.athletesCollectionView.register(UINib(nibName: "CollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "CollectionViewCell")
 
@@ -43,23 +50,16 @@ internal class HomeTableViewCell: UITableViewCell {
         self.athletesCollectionView.reloadData()
     }
     
-    override
-    internal func awakeFromNib() {
-        super.awakeFromNib()
-        
-        self.setCollectionView()
-    }
-    
 }
 
 extension HomeTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     internal func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
+        1
     }
     
     internal func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.gameAthletes.count
+        self.gameAthletes.count
     }
     
     internal func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -78,12 +78,11 @@ extension HomeTableViewCell: UICollectionViewDelegate, UICollectionViewDataSourc
     /// To adapt the cell size to its content:
     /// In the collection view size inspector, select "Custom" "Estimate Size" and insert (250, 250)
     internal func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 250.0, height: 250.0)
+        CGSize(width: 250.0, height: 250.0)
     }
 
     internal func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-
-        return UIEdgeInsets.init(top: 0.0, left: 16.0, bottom: 16.0, right: 16.0)
+        UIEdgeInsets.init(top: 0.0, left: 16.0, bottom: 16.0, right: 16.0)
     }
     
 }

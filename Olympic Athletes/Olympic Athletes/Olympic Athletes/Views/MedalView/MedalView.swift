@@ -65,4 +65,5 @@ internal class MedalView: UIView {
         
         self.medalCounter.text = "\(medalCount)"
     }
+    
 }
