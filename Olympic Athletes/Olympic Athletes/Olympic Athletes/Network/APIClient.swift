@@ -86,7 +86,10 @@ public class APIClient {
     ///   - data: Data to be parsed
     /// - Returns: Parsed response with generic type T
     public func parseResponse<T: APIRequest>(_ request: T, data: Data) throws -> T.Response {
-        return try JSONDecoder().decode(T.Response.self, from: data)
+        let decoder = JSONDecoder()
+        decoder.keyDecodingStrategy = .convertFromSnakeCase
+        
+        return try decoder.decode(T.Response.self, from: data)
     }
     
 }

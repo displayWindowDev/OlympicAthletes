@@ -8,7 +8,7 @@
 import Foundation
 
 internal struct Game: Hashable, Decodable {
-    internal var game_id: Int?
+    internal var gameId: Int?
     internal var city: String?
     internal var year: Int?
 }

@@ -37,28 +37,28 @@ internal class HomePresenter: HomeViewPresenter {
         let homeData = HomeData()
         
         queue.enter()
-        apiClient.send(AthletesRequest()) { [weak homeData] response in
+        apiClient.send(AthletesRequest()) { [weak homeData, weak self] response in
             switch response {
             case .success(let athletes):
                 athletes.forEach { athlete in
                     homeData?.athletes.append(athlete)
                 }
             case .failure:
-                self.view?.showErrorAlert()
+                self?.view?.showErrorAlert()
             }
 
             queue.leave()
         }
         
         queue.enter()
-        apiClient.send(GamesRequest()) { [weak homeData] response in
+        apiClient.send(GamesRequest()) { [weak homeData, weak self] response in
             switch response {
             case .success(let games):
                 games.forEach { game in
                     homeData?.games.append(game)
                 }
             case .failure:
-                self.view?.showErrorAlert()
+                self?.view?.showErrorAlert()
             }
 
             queue.leave()
@@ -81,13 +81,13 @@ internal class HomePresenter: HomeViewPresenter {
         
         athletes.forEach { athlete in
             queue.enter()
-            apiClient.fetchImage(AthletePhotoRequest(athleteId: "\(athlete.photo_id ?? 0)")) { [weak homeData] response in
+            apiClient.fetchImage(AthletePhotoRequest(athleteId: "\(athlete.photoId ?? 0)")) { [weak homeData, weak self] response in
                 
                 switch response {
                 case .success(let imageData):
                     homeData?.athletesImages.append((athlete: athlete, imageData: imageData))
                 case .failure:
-                    self.view?.showErrorAlert()
+                    self?.view?.showErrorAlert()
                 }
 
                 queue.leave()
@@ -96,12 +96,12 @@ internal class HomePresenter: HomeViewPresenter {
         
         athletes.forEach { athlete in
             queue.enter()
-            apiClient.send(AthleteResultsRequest(athleteId: "\(athlete.athlete_id ?? "")")) { [weak homeData] response in
+            apiClient.send(AthleteResultsRequest(athleteId: "\(athlete.athleteId ?? "")")) { [weak homeData, weak self] response in
                 switch response {
                 case .success(let results):
                     homeData?.athleteResults.append((athlete: athlete, results: results))
                 case .failure:
-                    self.view?.showErrorAlert()
+                    self?.view?.showErrorAlert()
                 }
 
                 queue.leave()
@@ -110,12 +110,12 @@ internal class HomePresenter: HomeViewPresenter {
         
         games.forEach { game in
             queue.enter()
-            apiClient.send(GameAthletesRequest(gameId: game.game_id ?? 0)) { [weak homeData] response in
+            apiClient.send(GameAthletesRequest(gameId: game.gameId ?? 0)) { [weak homeData, weak self] response in
                 switch response {
                 case .success(let athletes):
                     homeData?.athletesPerGame.append((game: game, athletes: athletes))
                 case .failure:
-                    self.view?.showErrorAlert()
+                    self?.view?.showErrorAlert()
                 }
 
                 queue.leave()
@@ -134,18 +134,18 @@ internal class HomePresenter: HomeViewPresenter {
         
         self.view?.showLoader()
         
-        self.retrieveHomeData { homeData in
-            self.homeData?.games = homeData.games.sorted { $0.year ?? 0 > $1.year ?? 0 }
-            self.homeData?.athletes = homeData.athletes
+        self.retrieveHomeData { [weak self] homeData in
+            self?.homeData?.games = homeData.games.sorted { $0.year ?? 0 > $1.year ?? 0 }
+            self?.homeData?.athletes = homeData.athletes
             
-            self.retrieveAthletesData(games: homeData.games, athletes: homeData.athletes) { homeData in
-                self.view?.hideLoader()
+            self?.retrieveAthletesData(games: homeData.games, athletes: homeData.athletes) { [weak self] homeData in
+                self?.view?.hideLoader()
                 
-                self.homeData?.athletesImages = homeData.athletesImages
-                self.homeData?.athletesPerGame = homeData.athletesPerGame
-                self.homeData?.athleteResults = homeData.athleteResults
+                self?.homeData?.athletesImages = homeData.athletesImages
+                self?.homeData?.athletesPerGame = homeData.athletesPerGame
+                self?.homeData?.athleteResults = homeData.athleteResults
                 
-                self.view?.reloadData()
+                self?.view?.reloadData()
             }
         }
     }
@@ -162,17 +162,17 @@ internal class HomePresenter: HomeViewPresenter {
                 athletes = athletesPerGame.athletes
                 
                 athletes = athletes.map { athlete in
-                    athlete.photo_id == self.homeData?.athletesImages.first(where: { athlete.photo_id == $0.athlete.photo_id })?.athlete.photo_id ?
-                    Athlete(athlete_id: athlete.athlete_id,
+                    athlete.photoId == self.homeData?.athletesImages.first(where: { athlete.photoId == $0.athlete.photoId })?.athlete.photoId ?
+                    Athlete(athleteId: athlete.athleteId,
                             name: athlete.name,
                             surname: athlete.surname,
                             dateOfBirth: athlete.dateOfBirth,
                             bio: athlete.bio,
                             weight: athlete.weight,
                             height: athlete.height,
-                            photo_id: athlete.photo_id,
-                            imageData: self.homeData?.athletesImages.first(where: { athlete.photo_id == $0.athlete.photo_id })?.imageData,
-                            results: self.homeData?.athleteResults.first(where: { athlete.athlete_id == $0.athlete.athlete_id })?.results) :
+                            photoId: athlete.photoId,
+                            imageData: self.homeData?.athletesImages.first(where: { athlete.photoId == $0.athlete.photoId })?.imageData,
+                            results: self.homeData?.athleteResults.first(where: { athlete.athleteId == $0.athlete.athleteId })?.results) :
                     athlete
                 }
             }
@@ -197,7 +197,7 @@ internal class HomePresenter: HomeViewPresenter {
             for result in results {
                 if resultsPerAthletes.contains(where: { $0.athlete == athlete }) {
                     let score: Int = self.evaluateScore(result: result)
-                    if let index = resultsPerAthletes.firstIndex(where: { $0.athlete.athlete_id == athlete.athlete_id }) {
+                    if let index = resultsPerAthletes.firstIndex(where: { $0.athlete.athleteId == athlete.athleteId }) {
                         resultsPerAthletes[index].score += score
                     }
                     continue
