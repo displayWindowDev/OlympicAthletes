@@ -63,7 +63,7 @@ final class Olympic_AthletesTests: XCTestCase {
         let homePresenter = HomePresenter(view: HomeViewController())
         
         self.measure {
-            _ = homePresenter.evaluateAthletes(in: Game(game_id: 2, city: "Rio de Janeiro", year: 2016))
+            _ = homePresenter.evaluateAthletes(in: Game(gameId: 2, city: "Rio de Janeiro", year: 2016))
         }
     }
 
